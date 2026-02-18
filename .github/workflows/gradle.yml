@@ -35,13 +35,13 @@ jobs:
 
       # Configuration de Xvfb (nécessaire pour les tests GUI mentionnés dans vos "Useful hints")
       # Note : Uniquement nécessaire sur Linux (ubuntu)
-      - name: Start Xvfb (Linux only)
-        if: runner.os == 'Linux'
-        run: |
-          sudo apt-get install -y xvfb
-          Xvfb :99 -ac -screen 0 1600x1200x24 > /dev/null 2>&1 &
-        env:
-          DISPLAY: ":99.0"
+      #- name: Start Xvfb (Linux only)
+      #  if: runner.os == 'Linux'
+       # run: |
+        #  sudo apt-get install -y xvfb
+       #   Xvfb :99 -ac -screen 0 1600x1200x24 > /dev/null 2>&1 &
+      #  env:
+      #    DISPLAY: ":99.0"
 
       # 3.6. Setup Gradle sans utiliser le Wrapper du projet
       # On utilise la dernière version de l'action officielle et une version stable de Gradle
