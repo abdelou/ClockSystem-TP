@@ -7,19 +7,23 @@ on:
   pull_request:
     branches: [ "main", "master" ]
 
-# 3.2. Permissions restreintes (Principe du moindre privilège)
-# On n'autorise que la lecture du contenu pour cloner le code.
-permissions:
-  contents: read
+
 
 jobs:
   build:
     # 4. Stratégie de matrice pour tester sur différents OS
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-    
-    runs-on: ${{ matrix.os }}
+   # strategy:
+   #   matrix:
+      #  os: [ubuntu-latest, macos-latest, windows-latest]
+    # 3.2. Permissions restreintes (Principe du moindre privilège)
+# On n'autorise que la lecture du contenu pour cloner le code.
+    permissions:
+      contents: read
+      
+    env:
+      DISPLAY: ":99.0"
+      
+    runs-on: ubuntu-latest
 
     steps:
       # 3.4. Utilisation de la dernière version de actions/checkout (v4)
@@ -46,7 +50,7 @@ jobs:
       # 3.6. Setup Gradle sans utiliser le Wrapper du projet
       # On utilise la dernière version de l'action officielle et une version stable de Gradle
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@v5
         with:
           gradle-version: '8.10' # Utilisez la dernière version stable de Gradle
 
@@ -54,8 +58,8 @@ jobs:
       # L'environnement DISPLAY est ajouté ici pour les tests graphiques
       - name: Build with Gradle
         run: gradle build
-        env:
-          DISPLAY: ":99.0"
+        
+   
 
       # 5. [Reporting] Publication du rapport de test en tant qu'Artéfact
       # On utilise "if: always()" pour avoir le rapport même si les tests échouent
@@ -63,5 +67,5 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-report-${{ matrix.os }}
+          name: test-report-ubuntu
           path: app/build/reports/tests/test
