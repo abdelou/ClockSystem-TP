@@ -31,10 +31,10 @@ jobs:
         uses: actions/checkout@v4
 
       # 3.3 & 3.4. Configuration du JDK version 24 (dernière version de setup-java)
-      - name: Set up JDK 24
+      - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
-          java-version: '24'
+          java-version: '21'
           distribution: 'temurin' # Distribution recommandée par l'industrie
 
       # Configuration de Xvfb (nécessaire pour les tests GUI mentionnés dans vos "Useful hints")
@@ -52,7 +52,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v5
         with:
-          gradle-version: '8.10' # Utilisez la dernière version stable de Gradle
+          gradle-version: '8.5' # Utilisez la dernière version stable de Gradle
 
       # Exécution du build et des test
       # L'environnement DISPLAY est ajouté ici pour les tests graphiques
