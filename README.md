@@ -5,6 +5,8 @@
 
 ![Java CI with Gradle](https://github.com/abdelou/ClockSystem-TP/actions/workflows/gradle.yml/badge.svg)
 
+![CodeQL Analysis](https://github.com/abdelou/ClockSystem-TP/actions/workflows/codeql.yml/badge.svg)
+
 Ce projet est un exercice pratique sur l'évolution logicielle et GitHub Actions...
 
 This is a gradle-based Java project for a Clock with Swing GUI and JUnit5 unit tests. It has been created and used by Tom Mens for educational purposes at the University of Mons.
