@@ -2,8 +2,6 @@
 
 ![Java CI with Gradle](https://github.com/abdelou/ClockSystem-TP/actions/workflows/gradle.yml/badge.svg)
 
-![Dependabot](.github/dependabot.yml/badge.svg) 
-
 ![pmd](https://github.com/abdelou/ClockSystem-TP/actions/workflows/pmd.yml/badge.svg)
 
 ![CodeQL Analysis](https://github.com/abdelou/ClockSystem-TP/actions/workflows/codeql.yml/badge.svg)
