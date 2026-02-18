@@ -2,10 +2,16 @@
 
 ![Java CI with Gradle](https://github.com/abdelou/ClockSystem-TP/actions/workflows/gradle.yml/badge.svg)
 
+![Dependabot](https://github.com/abdelou/ClockSystem-TP/actions/workflows/dependabot.yml/badge.svg)
 
-![Java CI with Gradle](https://github.com/abdelou/ClockSystem-TP/actions/workflows/gradle.yml/badge.svg)
+![pmd](https://github.com/abdelou/ClockSystem-TP/actions/workflows/pmd.yml/badge.svg)
 
 ![CodeQL Analysis](https://github.com/abdelou/ClockSystem-TP/actions/workflows/codeql.yml/badge.svg)
+
+![ScoreCard](https://github.com/abdelou/ClockSystem-TP/actions/workflows/scorecard.yml/badge.svg)
+
+
+
 
 Ce projet est un exercice pratique sur l'évolution logicielle et GitHub Actions...
 
