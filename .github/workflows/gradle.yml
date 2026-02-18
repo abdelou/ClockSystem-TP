@@ -50,7 +50,7 @@ jobs:
         with:
           gradle-version: '8.10' # Utilisez la dernière version stable de Gradle
 
-      # Exécution du build et des tests
+      # Exécution du build et des test
       # L'environnement DISPLAY est ajouté ici pour les tests graphiques
       - name: Build with Gradle
         run: gradle build
