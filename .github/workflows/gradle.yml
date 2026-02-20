@@ -51,15 +51,15 @@ jobs:
 
       # 3.6. Setup Gradle sans utiliser le Wrapper du projet
       # On utilise la dernière version de l'action officielle et une version stable de Gradle
-      #- name: Setup Gradle
-      #  uses: gradle/actions/setup-gradle@v5
-       # with:
-       #   gradle-version: '8.5' # Utilisez la dernière version stable de Gradle
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v5
+       with:
+        gradle-version: current # Utilisez la dernière version stable de Gradle
 
       # Exécution du build et des test
       # L'environnement DISPLAY est ajouté ici pour les tests graphiques
-      #- name: Build with Gradle
-      #  run: gradle build
+      - name: Build with Gradle
+        run: gradle build
         
    
 
