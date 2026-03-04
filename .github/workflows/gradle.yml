@@ -67,7 +67,7 @@ jobs:
       # On utilise "if: always()" pour avoir le rapport même si les tests échouent
     - name: Upload Test Report
       if: always()
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: test-report-ubuntu
         path: app/build/reports/tests/test
