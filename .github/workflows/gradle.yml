@@ -52,7 +52,7 @@ jobs:
       # 3.6. Setup Gradle sans utiliser le Wrapper du projet
       # On utilise la dernière version de l'action officielle et une version stable de Gradle
     - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v5
+      uses: gradle/actions/setup-gradle@v6
       with:
          gradle-version: current # Utilisez la dernière version stable de Gradle
 
